@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>                                               
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Lang" content="en">
+<meta name="author" content="">
+
+<title>andreamariani multiselect</title>
+
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+<!-- code prettify -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- zurb foundation -->
+<script src="foundation-4.3.2/js/foundation.min.js"></script>  
+<link rel="stylesheet" type="text/css" href="foundation-4.3.2/css/foundation.min.css">
+
+
+<!-- MULTISELECT -->
+<link rel="stylesheet" type="text/css" href="css/jquery.multiselect.css">
+<script src="js/jquery.multiselect.js"></script>                            
+<!-- add this for custom language -->  
+<!-- <script src="js/i18n/jquery.multiselect.it.js"></script>-->                          
+          
+          
+<style>
+/* for demo */
+form{ margin-top:20px; }
+</style>          
+          
+</head>
+<body>
+  
+  <div class="row">
+    <div class="large-12">
+        <h1>MultiSelect Foundation 4</h1>
+        <h5>Eric Hynds's plugin fixed for zurb foundation by <a href="www.andreamariani.net">andreamariani.net</a></h5>
+        <p>SOURCE &amp; DOCS: <a target="_blank" href="http://www.erichynds.com/blog/jquery-ui-multiselect-widget">http://www.erichynds.com/blog/jquery-ui-multiselect-widget</a></p>
+            
+    </div>
+    
+    
+  </div>
+           
+<form class="custom">                       
+    <div class="row"> 
+                 
+        <div class="large-4 columns">
+            <label for="multiselect_test">Multiselect Test</label>
+            <select id="multiselect_test" multiple="multiple">
+              <option>Value one</option>
+              <option>Value two</option>
+              <option>Value three</option>
+              <option>Value four</option>
+            </select>
+        </div>
+        
+        
+        <div class="large-4 columns">
+            <label for="multiselect_test">Multiselect Test</label>
+            <select id="multiselect_test2" multiple="multiple">
+              <option>Value one</option>
+              <option>Value two</option>
+              <option>Value three</option>
+              <option>Value four</option>
+            </select>
+        </div>
+        
+        
+        <div class="large-4 columns">
+            <label for="multiselect_test">Multiselect Test</label>
+            <select id="multiselect_test3" multiple="multiple">
+              <option>Value one</option>
+              <option>Value two</option>
+              <option>Value three</option>
+              <option>Value four</option>
+            </select>
+        </div>
+          
+    </div>  
+    
+    
+    
+    <div class="row"> 
+                 
+        <div class="large-4 columns">
+        <pre class="prettyprint">
+$("#multiselect_test").multiselect()
+</pre>
+        </div>
+        
+        <div class="large-4 columns">
+        <pre class="prettyprint">
+$("#multiselect_test2").multiselect({
+           open: function(event, ui){
+           // event handler here
+           alert('OPEN!');
+        }
+});
+</pre>
+                
+        </div>
+        
+        <div class="large-4 columns">
+        <pre class="prettyprint">
+$("#multiselect_test3").multiselect({
+    close: function(event, ui){
+        $("#result").html(
+            "RESULTS:"+
+            $(this).val()
+        );
+    }
+});
+</pre>
+        </div>
+        
+          
+    </div>   
+    
+    <div class="row">
+        <div class="large-8 columns"></div>
+        <div class="large-4 columns" id="result"></div>
+    </div>
+    
+   
+          
+</form>  
+  
+  
+<script>
+
+$("#multiselect_test").multiselect();
+$("#multiselect_test2").multiselect({
+    open: function(event, ui){
+        // event handler here
+        alert('OPEN!');
+    }
+});
+$("#multiselect_test3").multiselect({
+    close: function(event, ui){
+        $("#result").html(
+            "<br/>RESULTS:<br/><br/>"+
+            $(this).val()
+        );
+    }
+});
+
+</script>  
+  
+</body>
+</html>

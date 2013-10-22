@@ -1,0 +1,66 @@
+.ui-multiselect {   
+    text-align:left; 
+}
+.ui-multiselect span.ui-icon { 
+    float:right }
+.ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding:5px !important;  }
+
+.ui-multiselect-header { margin:0px; padding:0px; }
+.ui-multiselect-header ul { font-size:0.9em; margin:0px; padding:0px; }
+.ui-multiselect-header ul li { margin-left: 5px; display:block; text-decoration:none;  }
+.ui-multiselect-header a { text-decoration:none }
+.ui-multiselect-header a:hover {  }
+.ui-multiselect-header span.ui-icon { float:left }
+.ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
+
+.ui-multiselect-menu { 
+    display:none; 
+    border:1px solid #cccccc; 
+    position:absolute; 
+    z-index:10000; 
+    text-align: left; 
+    background-color: #fff;
+    padding-right:1px!important;
+    padding-left:1px!important;
+    margin-left:0px!important;
+    border-top:0;
+}
+.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:auto }
+.ui-multiselect-checkboxes label { cursor:default; display:block; border:1px solid transparent; padding:3px 1px }
+.ui-multiselect-checkboxes label input { position:relative; top:1px }
+.ui-multiselect-checkboxes li { clear:both; font-size:0.9em; padding-right:3px }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label { text-align:center; font-weight:bold; border-bottom:1px solid }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a { display:block; padding:3px; margin:1px 0; text-decoration:none }
+
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label { border:none }
+
+
+/* FOUNDATION 4 FIX 
+ * @author: andreamariani
+ * www.andreamariani.net
+ * andream@fasys.it
+*/
+.ui-multiselect-menu ul li{
+    list-style:none;
+    
+}
+.ui-multiselect-checkboxes{
+    clear:both;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+}
+.ui-multiselect-checkboxes li{
+    margin:0!important;
+    padding:0!important;
+   
+}
+.ui-multiselect-checkboxes li:hover{
+    background-color:#e4e4e4;
+}
+.ui-multiselect-checkboxes input{
+    margin-right:7px;
+    margin-left: 2px;
+}
